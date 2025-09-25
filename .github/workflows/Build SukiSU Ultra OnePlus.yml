@@ -25,6 +25,7 @@ on:
           - oneplus12_v
           - oneplus_13r
           - oneplus_ace3_pro_v
+          - oneplus_ace3_pro
           - oneplus_ace5
           - oneplus_pad_pro_v
           - oneplus_pad2_v
@@ -48,7 +49,7 @@ on:
         type: choice
         description: "下载SUSFS模块调用方式"
         required: true
-        default: NoN
+        default: CI
         options:
           - CI
           - Release
@@ -67,7 +68,7 @@ on:
         type: string
         description: "自定义内核后缀 (不输入使用随机字符串)"
         required: false
-        default: ""
+        default: "HT"
       FAST_BUILD:
         type: boolean
         description: "是否启用极速构建？"
@@ -87,7 +88,7 @@ on:
         type: boolean
         description: "是否添加更多ZRAM算法？"
         required: true
-        default: false
+        default: true
 
 jobs:
   build:
